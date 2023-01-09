@@ -71,9 +71,10 @@ void Pong::open()
             if(Settings.areSettingsChanged())
             {
                 if(HumanSelected)
-                Game.changePlayerTwoToHuman();
+                    Game.changePlayerTwoToHuman();
                 if(AISelected)
-                Game.changePlayerTwoToAI();
+                    Game.changePlayerTwoToAI();
+
                 Game.ResetGame();
             }
             

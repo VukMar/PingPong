@@ -40,6 +40,17 @@ void GamePlay::Update(sf::RenderWindow &window, float tick)
             else
                 pTwo.ButtonUpPressed = false;
         }
+        if(pOne.isAI)
+        {
+            if(ball.getPosition().y > pOne.getPos().y)
+                pOne.ButtonDownPressed = true;
+            else
+                pOne.ButtonDownPressed = false;
+            if(ball.getPosition().y < pOne.getPos().y)
+                pOne.ButtonUpPressed = true;
+            else
+                pOne.ButtonUpPressed = false;
+        }
         pOne.playerUpdate(tick);
         pTwo.playerUpdate(tick);
         ball.Update(pOne, pTwo, tick);
