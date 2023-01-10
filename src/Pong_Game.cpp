@@ -19,6 +19,7 @@ void GamePlay::create(sf::Vector2f PlayfieldSize, sf::Vector2f PlayfieldPosition
     pTwo.velocity = 700.f;
     
     ball.create(10,sf::Color::Blue, PlayfieldSize, PlayfieldPosition);
+    ball.resetBall();
 }
 
 void GamePlay::Update(sf::RenderWindow &window, float tick)
