@@ -28,6 +28,9 @@ bool Pause = false;
 
 private:
 
+sf::Text Title;
+sf::Font font;
+
 vui::Button NewGame;
 vui::Button Play;
 vui::Button Settings;

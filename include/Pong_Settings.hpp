@@ -10,12 +10,15 @@ class SettingsPage
 {
 private:
 
+sf::Font font;
+
 vui::CheckBox AI_opponent;
 vui::CheckBox Player_opponent;
+
+sf::Text Title;
 sf::Text OpponentText;
 sf::Text OpponentText1;
 sf::Text OpponentText2;
-sf::Font font;
 
 bool settingsChanged = false;
 
