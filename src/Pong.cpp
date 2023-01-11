@@ -66,13 +66,19 @@ void Pong::open()
         }
         else if(MainMenu.SettingsShown)
         {
-            Settings.Update(HumanSelected,AISelected);
+            Settings.Update(Human_P1,AI_P1,Settings::Player::One);
+            Settings.Update(Human_P2,AI_P2,Settings::Player::Two);
             
             if(Settings.areSettingsChanged())
             {
-                if(HumanSelected)
+                if(Human_P1)
+                    Game.changePlayerOneToHuman();
+                else if(AI_P1)
+                    Game.changePlayerOneToAI();
+                
+                if(Human_P2)
                     Game.changePlayerTwoToHuman();
-                if(AISelected)
+                else if(AI_P2)
                     Game.changePlayerTwoToAI();
 
                 Game.ResetGame();

@@ -40,8 +40,8 @@ bool GamePlayMusic = false;
 GamePlay Game;
 
 //Settings Object
-bool HumanSelected = true;
-bool AISelected = false;
+bool Human_P1 = true, Human_P2 = true;
+bool AI_P1 = false, AI_P2 = false;
 SettingsPage Settings;
 
 void handleEvents(sf::RenderWindow &Window);
