@@ -66,8 +66,8 @@ void Pong::open()
         }
         else if(MainMenu.SettingsShown)
         {
-            Settings.Update(Human_P1,AI_P1,Settings::Player::One);
-            Settings.Update(Human_P2,AI_P2,Settings::Player::Two);
+            Settings.Update(Human_P1, AI_P1, Settings::Player::One);
+            Settings.Update(Human_P2, AI_P2, Settings::Player::Two);
             
             if(Settings.areSettingsChanged())
             {
