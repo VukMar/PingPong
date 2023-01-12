@@ -66,9 +66,9 @@ void Pong::open()
         }
         else if(MainMenu.SettingsShown)
         {
-            Settings.Update(Human_P1, AI_P1, Settings::Player::One);
-            Settings.Update(Human_P2, AI_P2, Settings::Player::Two);
-            
+            Settings.UpdatePlayer(Human_P1, AI_P1, Settings::Player::One);
+            Settings.UpdatePlayer(Human_P2, AI_P2, Settings::Player::Two);
+            Settings.UpdateMusic(Music, Window);
             if(Settings.areSettingsChanged())
             {
                 if(Human_P1)

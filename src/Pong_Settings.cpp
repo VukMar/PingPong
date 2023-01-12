@@ -26,6 +26,7 @@ void SettingsPage::create(sf::RenderWindow &window)
 
     playerOneSettingsCreate(winSize);
     playerTwoSettingsCreate(winSize);
+    musicSetingsCreate(winSize);
     
 }
 
@@ -99,7 +100,32 @@ void SettingsPage::playerTwoSettingsCreate(sf::Vector2f winSize)
     AI_opponent[1].create(30, sf::Vector2f(OpponentText2[1].getPosition().x + fr2.width, OpponentText2[1].getPosition().y),vui::Style::Circle);
 }
 
-void SettingsPage::Update(bool &Human_Selected, bool &AI_Selected, Settings::Player player)
+void SettingsPage::musicSetingsCreate(sf::Vector2f winSize)
+{
+    sf::Text t , t1;
+    t.setFont(font);
+    t.setCharacterSize(30);
+    t.setString("Music Settings:");
+    sf::FloatRect fr = t.getGlobalBounds();
+    t.setOrigin(fr.width/2,fr.height/2);
+
+    t1.setFont(font);
+    t1.setCharacterSize(30);
+    t1.setString("Music volume >> ");
+    sf::FloatRect fr1 = t1.getGlobalBounds();
+
+    MusicSettings = t;
+    MusicVolumeText = t1;
+
+    MusicSettings.setPosition(winSize.x/4, winSize.y - 250);
+    MusicVolumeText.setPosition(MusicSettings.getPosition().x - fr.width/2,
+                                winSize.y - 200);
+
+    MusicVolume.create(300.f, 30.f, sf::Vector2f(MusicVolumeText.getPosition().x + fr1.width,MusicVolumeText.getPosition().y));
+    MusicVolume.setStartingValue(iMusicVolume);
+}
+
+void SettingsPage::UpdatePlayer(bool &Human_Selected, bool &AI_Selected, Settings::Player player)
 {
     int i = player;
     if(AI_opponent[i].isBoxChecked() && Human_Selected)
@@ -122,6 +148,19 @@ void SettingsPage::Update(bool &Human_Selected, bool &AI_Selected, Settings::Pla
     }
 }
 
+void SettingsPage::UpdateMusic(sf::Music &Music, sf::RenderWindow &window)
+{
+    MusicVolume.Update(window);
+    if(iMusicVolume != MusicVolume.getPercentValue())
+    {
+        iMusicVolume = MusicVolume.getPercentValue();
+    }
+    if(Music.getVolume() != iMusicVolume)
+    {
+        Music.setVolume(iMusicVolume);
+    }
+}
+
 bool SettingsPage::areSettingsChanged()
 {
     if(settingsChanged)
@@ -134,7 +173,9 @@ bool SettingsPage::areSettingsChanged()
 
 void SettingsPage::ShowTo(sf::RenderWindow &window)
 {
+    //Title
     window.draw(Title);
+    //Player Settings
     for(int i = 0; i < 2; i++)
     {
         AI_opponent[i].displayTo(window);
@@ -143,5 +184,11 @@ void SettingsPage::ShowTo(sf::RenderWindow &window)
         window.draw(OpponentText1[i]);
         window.draw(OpponentText2[i]);
     }
+    //Music Settings
+    window.draw(MusicSettings);
+    window.draw(MusicVolumeText);
+    MusicVolume.displayTo(window);
+
+
 }
 

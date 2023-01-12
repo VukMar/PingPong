@@ -5,6 +5,7 @@
 #include <SFML/Audio.hpp>
 #include "D:/VS Code Vuk/C++/SFMLUI/include/UI_Button.hpp"
 #include "D:/VS Code Vuk/C++/SFMLUI/include/UI_CheckBox.hpp"
+#include "D:/VS Code Vuk/C++/SFMLUI/include/UI_Slider.hpp"
 
 namespace Settings
 {
@@ -27,6 +28,11 @@ sf::Text OpponentText[2];
 sf::Text OpponentText1[2];
 sf::Text OpponentText2[2];
 
+int iMusicVolume = 60;
+sf::Text MusicSettings;
+sf::Text MusicVolumeText;
+vui::Slider MusicVolume;
+
 bool settingsChanged = false;
 
 public:
@@ -40,7 +46,11 @@ void playerOneSettingsCreate(sf::Vector2f winSize);
 
 void playerTwoSettingsCreate(sf::Vector2f winSize);
 
-void Update(bool &Human_Selected, bool &AI_Selected, Settings::Player player);
+void musicSetingsCreate(sf::Vector2f winSize);
+
+void UpdatePlayer(bool &Human_Selected, bool &AI_Selected, Settings::Player player);
+
+void UpdateMusic(sf::Music &Music, sf::RenderWindow &window);
 
 bool areSettingsChanged();
 
