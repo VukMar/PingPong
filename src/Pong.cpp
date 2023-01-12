@@ -3,6 +3,7 @@
 Pong::Pong()
 {
     Music.setVolume(20);
+    Music.setLoop(true);
 }
 
 Pong::~Pong(){}
