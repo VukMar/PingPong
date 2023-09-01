@@ -1,6 +1,6 @@
 # PingPong beta0.5.6 - Practice project 👨‍💻
 
-A semi-finished PONG game project for practice. The core game logic is implemented, but there's room for visual improvement. The game includes the use of SFMLUI (VUI), a custom library for UI elements. VUI will be shared in the future.
+A semi-finished PONG game project for practice. The core game logic is implemented, but there's room for visual improvement. The game includes the use of SFMLUI (VUI), a custom library for UI elements.
 
 To anyone exploring this repository, I hope you find it interesting. Feel free to provide feedback on how I can enhance the code. 👨‍💻 Practice Project 👨‍🎓
 
