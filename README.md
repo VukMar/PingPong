@@ -7,6 +7,8 @@ To anyone exploring this repository, I hope you find it interesting. Feel free t
 ## Features
 
 - A PONG game with implemented logic.
+- AI Logic for players.
+- Choose witch player do you want to be or just watch an AI play against itself.
 - Integration of [SFMLUI(VUI)](https://github.com/VukMar/SFMLUI) for user interface elements.
 
 ## Installation
