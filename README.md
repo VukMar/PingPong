@@ -1,6 +1,6 @@
 # PingPong beta0.5.6 - Practice project 👨‍💻
 
-A semi-finished PONG game project for practice. The core game logic is implemented, but there's room for visual improvement. The game includes the use of SFMLUI (VUI), a custom library for UI elements.
+A semi-finished PONG game project for practice. The core game logic is implemented, but there's room for visual improvement. The game includes the use of [SFMLUI(VUI)](https://github.com/VukMar/SFMLUI), a custom library for UI elements.
 
 To anyone exploring this repository, I hope you find it interesting. Feel free to provide feedback on how I can enhance the code. 👨‍💻 Practice Project 👨‍🎓
 
@@ -12,7 +12,7 @@ To anyone exploring this repository, I hope you find it interesting. Feel free t
 ## Installation
 
 ### NOTICE:
-  **Make will not be able to build the files without SFML and  SFMLUI(VUI)**
+  **Make will not be able to build the files without [SFML](https://www.sfml-dev.org/) and  [SFMLUI(VUI)](https://github.com/VukMar/SFMLUI)**
 
 1. Clone this repository to your local machine:
 
