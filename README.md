@@ -19,7 +19,7 @@ To anyone exploring this repository, I hope you find it interesting. Feel free t
 1. Clone this repository to your local machine:
 
    ```
-   git clone https://github.com/YourUsername/PingPong.git
+   git clone https://github.com/VukMar/PingPong.git
    ```
 2. Navigate to the projects directory:
 
