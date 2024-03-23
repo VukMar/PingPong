@@ -11,6 +11,8 @@ To anyone exploring this repository, I hope you find it interesting. Feel free t
 - Choose witch player do you want to be or just watch an AI play against itself.
 - Integration of [SFMLUI(VUI)](https://github.com/VukMar/SFMLUI) for user interface elements.
 
+![Alt text](https://upww.screenrec.com/images/f_UpeVmLFdI8aE7v251Mfbqlg6z0hjZAQS.png)
+
 ## Installation
 
 ### NOTICE:
